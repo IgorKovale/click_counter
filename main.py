@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 import argparse
 
 
-def createParser():
+def create_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('link')
     return parser
@@ -56,7 +56,7 @@ def is_shorten_link(url):
 if __name__ == '__main__':
     load_dotenv()
     token = os.environ['VK_TOKEN']
-    parser = createParser()
+    parser = create_parser()
     parsed_link = parser.parse_args()
     url = parsed_link.link
     if is_shorten_link(url):
